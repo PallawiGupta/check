@@ -1,0 +1,32 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Building'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Testing'
+            }
+        }
+        stage('Deploy on test') {
+            steps {
+                echo 'Deploying on test'
+            }
+        }
+        stage('Deploy on prod') {
+            steps {
+                echo 'Deploying on prod'
+            }
+            
+        }
+        stage('Run as command') {
+            steps {
+                bat 'echo %date%'
+            }
+        }
+    }
+}
